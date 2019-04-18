@@ -1,0 +1,11 @@
+<div>
+	{% for d in object_list %}
+		{{ d.time_now}}
+		 -- 
+		{{d.text}}
+	
+	<a href="{% url "diary_detail" d.id %}">details</a>
+	<a href="{% url "diary_update" pk=d.pk %}">edit</a>
+	<a href="{% url "diary_delete" pk=d.pk %}">delete</a>
+	{% endfor %}
+</div>
